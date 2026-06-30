@@ -33,7 +33,7 @@ steps:
     echo "Pass Rate: $PASSRATE%"
     echo "Message: $MESSAGE"
  
-    if [ "$STATUS" != "PASS" ]; then
+    if [ "$STATUS" != "Pass" ]; then
       echo "##vso[task.logissue type=error]Quality Gate Failed: $MESSAGE"
       exit 1
     fi
