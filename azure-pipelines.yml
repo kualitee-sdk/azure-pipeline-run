@@ -16,10 +16,10 @@ steps:
       -H "token: $(KUALITEE_TOKEN)" \
       -H "Content-Type: application/json" \
       -d "{
-            \"projectId\": \"22\",
-            \"testPlanId\": \"25\",
+            \"projectId\": \"$(PROJECT_ID)\",
+            \"testPlanId\": \"$(TEST_PLAN_ID)\",
             \"status\": \"Pass\",
-            \"environment\": \"Prod\"
+            \"environment\": \"$(ENVIRONMENT)\"
           }")
  
     echo "API Response:"
@@ -45,3 +45,4 @@ steps:
 - script: |
     echo "Deploying to $(ENVIRONMENT)..."
   displayName: 'Deploy'
+ 
